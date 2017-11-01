@@ -9,23 +9,28 @@ function ItunesController() {
 
   //Start coding here
   function draw(songList) {
+    console.log(songList)
     var template = ''
     for (var i = 0; i < songList.length; i++) {
       var result = songList[i];
+      result.albumArt = result.albumArt.replace('100x100bb','1000x1000bb')
       template += `
-        <div class="col-md-4">
+        <div class="col-md-6 border">
           <img src="${result.albumArt}">
-          <h4>${result.artist}</h4>
+          <h3>${result.artist}</h3>
           <h6>${result.collection}</h6>
-          <h6>${result.preview}</h6>
-          <h4>${result.price}</h4>
-          <h6>${result.title}</h6>
+          <h4>${result.title}</h4>
+          <audio controls="controls">
+            <source src="${result.preview}" />
+          </audio>
+          <h6>${result.price}</h6>
+          
         </div>
         `
     }
-     document.getElementById('results').innerHTML = template 
+    document.getElementById('results').innerHTML = template
   }
-      
+
 
 
 

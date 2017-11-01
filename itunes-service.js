@@ -8,7 +8,7 @@ function ItunesService(){
       var apiUrl = url + encodeURIComponent(url2);
       
       //changes the button to loading while songs load
-      $('#get-music-button').text('LOADING....');
+      $('#get-music-button').text('SPINNING....');
       
       //modifies the objects to reduce the excess data
       return $.getJSON(apiUrl).then(function(response){

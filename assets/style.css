@@ -1,3 +1,30 @@
-.red-border{
-    outline: red solid 1px
+.jumbotron-fluid{
+    background-image: url(https://images.unsplash.com/photo-1496293455970-f8581aae0e3b?auto=format&fit=crop&w=1001&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
+    height: 30em;
+    background-position: center;
+    background-size: cover;
+    text-align: right;
+    color: white;   
+}
+body{
+    background-image: url(https://www.transparenttextures.com/patterns/3px-tile.png);
+    background-color: #2b2628;
+    color: white;
+} 
+/* .img{
+    height: 400px;
+    width: 400px;
+}  */
+.border{
+    outline: #ff8100 solid 1px; 
+    
+}
+
+.beta{
+    padding: 5%;
+    /* display: inline-block; */
+}
+.btn{
+    background-color: #2b2628;
+    /* color: #2b2628; */
 }
