@@ -31,9 +31,23 @@ function ItunesController() {
     document.getElementById('results').innerHTML = template
   }
 
+  window.addEventListener("play", function(evt)
+  {
+      if(window.$_currentlyPlaying && window.$_currentlyPlaying != evt.target)
+      {
+          window.$_currentlyPlaying.pause();
+      } 
+      window.$_currentlyPlaying = evt.target;
+  }, true);
 
-
-
+  // document.addEventListener('play', function (e) {
+  //   var audios = document.getElementsByClassName('audio');
+  //   for (var i = 0, len = audios.length; i < len; i++) {
+  //     if (audios[i] != e.target) {
+  //       audios[i].pause();
+  //     }
+  //   }
+  // }, true);
 
 
 

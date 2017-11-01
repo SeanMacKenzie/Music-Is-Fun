@@ -11,20 +11,19 @@ body{
     background-color: #2b2628;
     color: white;
 } 
-/* .img{
-    height: 400px;
-    width: 400px;
-}  */
+
 .border{
+    background-image: url(https://www.transparenttextures.com/patterns/3px-tile.png);
     outline: #ff8100 solid 1px; 
-    
+    background-color: #77747f;
+    padding: 2%;
 }
 
 .beta{
     padding: 5%;
-    /* display: inline-block; */
+    
 }
 .btn{
     background-color: #2b2628;
-    /* color: #2b2628; */
+    
 }
