@@ -12,22 +12,22 @@ function ItunesController() {
     console.log(songList)
     var template = ''
     for (var i = 0; i < songList.length; i++) {
-      var result = songList[i];
-      result.albumArt = result.albumArt.replace('100x100bb', '1000x1000bb')
-      
+      var song = songList[i];
+      song.albumArt = song.albumArt.replace('100x100bb', '1000x1000bb')
+
       template += `
         <div class="col-sm-6 border">
-          <img src="${result.albumArt}">
-          <h3>${result.artist}</h3>
-          <h6>${result.collection}</h6>
-          <h4>${result.title}</h4>
-          <h6>${result.price}</h6>
+          <img src="${song.albumArt}">
+          <h3>${song.artist}</h3>
+          <h6>${song.collection}</h6>
+          <h4>${song.title}</h4>
+          <h6>${song.price}</h6>
           <audio controls="controls">
-            <source src="https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/Music3/v4/00/23/38/0023383d-1616-fbe2-b3a3-7f2de268911b/mzaf_7209253486009554987.plus.aac.p.m4a" />
+            <source src="${song.preview}" />
           </audio>
         </div>
         `
-        // I know the audio src isn't correct. At the bottom of the this .js file is the correct information to plug in. I couldn't resist a rick roll.
+      // I know the audio src isn't correct. At the bottom of the this .js file is the correct information to plug in. I couldn't resist a rick roll.
 
     }
     document.getElementById('results').innerHTML = template
@@ -49,10 +49,7 @@ function ItunesController() {
   //   }
   // }, true);
 
-  // <audio controls="controls">
-  //   <source src="${result.preview}" />
-  // </audio>
-
+ 
 
 
 }
